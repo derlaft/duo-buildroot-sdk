@@ -290,7 +290,7 @@ kerne%: export ARCH=$(patsubst "%",%,$(CONFIG_ARCH))
 
 kernel-menuconfig: ${KERNEL_OUTPUT_CONFIG_PATH}
 	$(call print_target)
-	${Q}$(MAKE) -j${NPROC} -C ${KERNEL_PATH} O=${KERNEL_PATH}/${KERNEL_OUTPUT_FOLDER} menuconfig
+	${Q}$(MAKE) -j${NPROC} -C ${KERNEL_PATH} O=${KERNEL_PATH}/${KERNEL_OUTPUT_FOLDER} nconfig
 	${Q}$(MAKE) -j${NPROC} -C ${KERNEL_PATH} O=${KERNEL_PATH}/${KERNEL_OUTPUT_FOLDER} savedefconfig
 
 kernel-setconfig: ${KERNEL_OUTPUT_CONFIG_PATH}
